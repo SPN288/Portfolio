@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #23283e;
+    color: white;
+    overflow-y: scroll;
+
+}
+
+/*HEADER*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    background-color:  #23283e;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+
+}
+
+/*NAVBAR*/
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    top: 0;
+    display: flex;
+    height: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.nav-links a {
+    color: hsla(0, 0%, 100%, .5);
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.menu {
+    display: flex;
+    gap: 2em;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 3px;
+}
+
+
+
+
+
+main {
+    margin-top: 50px;
+
+}
+
+.sect {
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+.intro {
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+}
+
+.intro-name {
+
+    color: #cdcdff;
+    font-size: 3rem;
+    margin: 5px;
+    padding: 10px;
+}
+
+#name {
+    color: #90a0d9;
+}
+
+.intro-deg {
+    color: #cdcdff;
+    font-size: 2rem;
+    margin: 5px;
+    padding: 10px;
+}
+
+.intro-decs {
+    color: #cdcdff;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+#resume {
+    background-color: inherit;
+    color: #cdcdff;
+    padding: 10px;
+    border-radius: 4px;
+    border-color: #cdcdff;
+    cursor: pointer;
+}
+
+#dp-box {
+    width: 30%;
+}
+
+#dp {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-around;
+}
+#about-dp {
+    margin-top: 8%;
+    width: 200px;
+}
+
+.about-box {
+    margin: 10px;
+    padding: 1%;
+    width: 750px;
+    text-align: left;
+    font-size: 20px;
+    
+}
+.about-box li {
+    list-style: circle;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-evenly;
+
+}
+
+#sk {
+    font-size: 3em;
+    text-align: center;
+}
+
+.skill-box {
+    margin: 10px;
+    padding: 20px;
+    width: inherit;
+    text-align: center;
+    font-size: xx-large;
+    
+
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+#pr {
+    font-size: 3em;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+.project-box {
+    margin: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    font-size: xx-large;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    
+}
+
+
+footer {
+    position: absolute;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+footer a {
+    color: antiquewhite;
+    margin: 1em;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a:hover {
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+.contact-box {
+    margin: 2%;
+    padding: 5%;
+    text-align: left;
+    width: 190px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+.contacts-logo {
+    width: 30px;
+    margin-bottom: -9px;
+}
+
+.lol {
+    color: azure;
+}
+
+#dvc {
+    width: 400px;
+    margin-left: -20%;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 5px;
+    overflow-y: hidden;
+}
+#dav:hover~#dvc {
+    visibility: visible;
+}
+#kiti {
+    width: 400px;
+    margin-left: -20%;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 5px;
+    overflow-y: hidden;
+}
+#kiit:hover~#kiti {
+    visibility: visible;
+}
+@media (max-width: 768px) {
+
+    .about-box {
+        margin: 5px;
+        
+        width: 165px;
+        text-align: left;
+        font-size: 15px;   
+    }
+    .prodecp {
+        font-size: 15px;
+    }
+    #kiti {
+        width: 200px;
+    }
+    #dvc {width: 200px;}
+
+}
