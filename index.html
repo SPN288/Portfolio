@@ -2,210 +2,327 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>SPN</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <div class="menu">
-                    <li><a href="#abot">About</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#projj">Projects</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="sect">
-            <div id="abot" class="intro">
-                <p class="intro-name">Hi,I am <span id="name">Satya Prakash Nirala</span>
-                <p>
-                <p class="intro-deg"> An engineer and Developer
-                <p>
-                <p class="intro-decs">I am a driven individual who has
-                    a strong enthusiasm for computer
-                    science. And I have been looking
-                    out for the internship and skill
-                    development programs. I work
-                    efficiently both as an individual
-                    contributor well as along with a team.</p>
-                <a href="images/SPN_Resume.pdf" download id=""><button id="resume">RESUME</button></a>
-            </div>
-        </section>
+  <nav id="desktop-nav">
+    <div class="logo">Satya Prakash Nirala</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="dropdown-nav">
+    <div class="logo">Satya Prakash Nirala</div>
+    <div class="dropdown-menu">
+      <div class="dropdown-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section_pic-container">
+      <img class="section_pic-container" src="./assets/profile-pic.jpg" alt="" srcset="" />
+    </div>
+    <div class="section_text">
+      <p class="section_text_p1">Hello I'm</p>
+      <h1 class="title">Satya Prakash Nirala</h1>
+      <p class="section_text_p2">A programmer and Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/SPNirala.pdf')">
+           Resume
+        </button>
+        <a href="#contact">
+          <button class="btn btn-color-1">
 
-        <section class="sect">
-            <h2 id="sk"><strong>About me</strong></h2>
-            <div class="about">
+            Contact
+          </button>
+        </a>
+      </div>
+      <div id="social-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/satya-prakash-nirala-6a30b2225'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/SPN288'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section_text_p1">Get to know me!</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
 
-                <div id="about-dp">
-                    <img src="images/my pic.png" alt="my picture" id="dp">
-                </div>
-                <div class="about-box">
-                    <h2><strong><u>EDUCATION</u> </strong></h2><br>
-                    <ul>
-                        <br>School- <br>
-                        <li id="dav"> DAV Public School,Hazaribagh,Jharkhand </li><img src="images/dav.jpg" id="dvc">
-                        <br>College- <br>
-                        <li id="kiit">KIIT University,Bhubaneswar,Odisa
-                            Branch-CSSE</li><img src="images/kiit.jpeg" id="kiti">
-                    </ul>
-                    <br>
-                    <h2><strong><u>CERTIFICATIONS</u></strong></h2><br>
-                    <ul>
-                        <li><a class="lol" href="">HackerRank Problem Solving (Bascic) ID:5220919EBFD1</a></li>
-                        <li><a class="lol" href=""></a>HackerRank Problem Solving (Intermediate) ID:D34EB46BFA73
-                        </li>
-                        <li><a class="lol" href=""></a>Full Stack Web Development Devtown(HTML,CSS,javascript,Reactjs,Nodejs)</li>
-                        <li><a class="lol" href="images/yhill.pdf">Yhills Web Development training and Internship
-                                2022-2023 Certificate ID : YHI-5001405</a></li>
-                        <li><a class="lol" href=""></a>IBM(Coursera) Web Development with HTML, CSS, JavaScript</li>
-                        <li><a class="lol" href=""></a>IBM(Coursera) Git and GitHub</li>
-                        <li><a class="lol" href=""></a>IBM(Coursera) Introduction to Cloud Computing</li>
-                        
-                    </ul>
-
-                </div>
-
-        </section>
-
-
-        <section id="skill" class="sect">
-            <h3 id="sk">SKILLS</h3>
-            <div class="skills">
-                <div class="skill-box">Java</div>
-                <div class="skill-box">C++</div>
-                <div class="skill-box">HTML</div>
-                <div class="skill-box">CSS</div>
-                <div class="skill-box">JAVASCRIPT</div>
-            </div>
-            <div class="skills">
-                <div class="skill-box">REACT</div>
-                <div class="skill-box">NODE</div>
-                <div class="skill-box">EXPRESS</div>
-                <div class="skill-box">GIT</div>
-            </div>
-        </section>
-        <section class="sect" id="projj">
-            <h3 id="pr">PROJECTS</h3>
-            <div class="project">
-                <div class="project-box">
-                    <h3>KIIT Store</h3> <br>
-                    <img src="images/kiitstore.png" alt="commerce website here" id="dp">
-                    <p class="prodecp">A platform with role-based access control. Admins manage all users, Managers manage Users,
-                         and Users can only browse and purchase. JWT authentication ensures secure, role-specific access to the respective dashboards.
-                    </p>
-                    <a href="https://kiitstore.netlify.app/"><button id="resume">Go -></button></a>
-                </div>
-                <div class="project-box">
-                    <h3> ZELIOUS</h3> <br>
-                    <img src="images/zelious.png" alt="commerce website here" id="dp">
-                    <p class="prodecp">The MERN stack-based food ordering app offers a seamless user experience for browsing restaurants,
-                         menus, and placing orders. MongoDB stores user and order data, while Express.js and Node.js power the backend for efficient operations.
-                    </p>
-                    <a href="https://zelious.onrender.com/"><button id="resume">Go -></button></a>
-                </div>
-                <div class="project-box">
-                    <h3>Crash Aid</h3> <br>
-                    <img src="images/crashAid.png" alt="commerce website here" id="dp">
-                    <p class="prodecp">A real-time accident detection Android app built in Android Studio using Java, leveraging GPS, accelerometer,
-                             and gyroscope data to notify users within 500m, with bed availability updates for emergencies.
-                    </p>
-                    <a href="https://github.com/SPN288/ArashAid_app"><button id="resume">Go -></button></a>
-                </div>
-                
-
-                <div class="project-box">
-                    <h3>Book My Show clone</h3> <br>
-                    <img src="images/bmsc.png" alt="" id="dp">
-                    <p class="prodecp">Made a Book My Show clone using React as fronted project
-                        and implemented the basic UI and functionality. Integrated
-                        TMDB API to fetch images.
-                    </p>
-                    <a href="https://bookmyshowclonespn.netlify.app/"><button id="resume">Go -></button></a>
-
-                </div>
-                <div class="project-box">
-                    <h3>Thoughtsheet</h3> <br>
-                    <img src="images/Thoughtsheet.png" alt="" id="dp">
-                    <p class="prodecp">A simple website where user can Add their thoughts and
-                        quotes to the websites collection. It takes input through a
-                        form and then add it to the page.
-                    </p>
-                    <a href="https://spn288.github.io/Thoughtsheet/"><button id="resume">Go -></button></a>
-
-                </div>
-
-                <div class="project-box">
-                    <h3>Secret Santa</h3> <br>
-                    <img src="images/santa.png" alt="commerce website here" id="dp">
-                    <p class="prodecp">Created a Secret Santa form page using HTML,CSS and
-                        JavaScript
-                    </p>
-                    <a href="https://spn288.github.io/elfster_clone/"><button id="resume">Go -></button></a>
-                </div>
-
-                <div class="project-box">
-                    <h3>Book API </h3> <br>
-                    <img src="images/bkapi.png" alt="" id="dp">
-                    <p class="prodecp">Made a Book database API as a backend project using Node
-                        JS and Mongo DB as database.
-                    </p>
-                    <a href="https://github.com/SPN288/BookAPI.git"><button id="resume">Go -></button></a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-    </main>
-
-    <footer>
-        <h2>Find me on </h2>
-        <div class="contacts" id="contacts">
-            <a href="contactform.html">
-                <div class="contact-box"><img src="images/con-rem.png" alt="contact from" class="contacts-logo">Contact
-                    Form</div>
-            </a>
-
-            <a href="#contacts">
-                <div class="contact-box"><img src="images/whatapp.png" alt="whatsapp" class="contacts-logo">7479640793
-                </div>
-            </a>
-
-            <a href="#contacts">
-                <div class="contact-box"><img src="images/mail.png" alt="email" class="contacts-logo">spnirala@gmail.com
-                </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/satya-prakash-nirala-6a30b2225">
-                <div class="contact-box"><img src="images/in.png" alt="" class="contacts-logo"> Linkden</div>
-            </a>
-
-            <a href="https://github.com/SPN288">
-                <div class="contact-box"><img src="images/git.png" alt="logo" class="contacts-logo">Github</div>
-            </a>
-            <a href="https://leetcode.com/u/spn288/">
-                <div class="contact-box"><img src="images/leetcode.jpeg" alt="logo" class="contacts-logo">LeetCode</div>
-            </a>
-
-            <a href="https://instagram.com/nirala.satyaprakash?igshid=MzRlODBiNWFlZA==">
-                <div class="contact-box"><img src="images/insta.png" alt="logo" class="contacts-logo">Instagram</div>
-            </a>
+      <div class="about-detail-container">
+        <div class="about-containers">
+          <div class="detail-container">
+            <img src="./assets/experience.png" alt="Experience Icon" class="icon" />
+            <h3>Experience</h3>
+            <p>
+              Fresher <br />
+              Programmer <br>
+              MERN Developer
+            </p>
+          </div>
+          <div class="detail-container">
+            <img src="./assets/education.png" alt="Education Icon" class="icon" />
+            <h3>Education</h3>
+            <p>
+              B.Tech <br />
+              Bechelors Degree<br />
+              KIIT University
+            </p>
+          </div>
         </div>
+        <div class="text-container">
+          <p>
+            Hi, I'm Satya Prakash Nirala, a Computer Science and Systems Engineering
+            undergraduate at Kalinga Institute of Industrial Technology,
+            Bhubaneswar. I am passionate about leveraging technology to solve
+            complex problems and build impactful solutions. My expertise lies
+            in Java Programming and MERN Stack Web development. I thrive on
+            learning new technologies and applying them to create scalable and
+            efficient systems. I am always eager to collaborate, explore new
+            challenges, and contribute to meaningful projects in the tech
+            space.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <!-- cchange name from experience to skills -->
+  <section id="experience">
+    <p class="section_text_p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+
+        <div class="detail-container">
+          <h2 class="experience-sub-title">
+            Programming Language and Frameworks
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>C/C++</h3>
+
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>SQL</h3>
+
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>React</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>Node</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>Express</h3>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <div class="detail-container">
+          <h2 class="experience-sub-title">Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>Github</h3>
+
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>VS Code</h3>
+
+              </div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>MongoDB</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience Icon" class="icon" />
+              <div>
+                <h3>Android Studio</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+
+  <section id="projects">
+    <p class="section_text_p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="project">
+      <div class="project-box">
+        <h3>KIIT Store</h3> <br>
+        <img src="assets/kiitstore.png" alt="commerce website here" id="dp">
+        <p class="prodecp">A platform with role-based access control. Admins manage all users, Managers manage Users,
+          and Users can only browse and purchase. JWT authentication ensures secure, role-specific access to the
+          respective dashboards.
+        </p>
+        <a href="https://kiitstore.netlify.app/"><button class="btn btn-color-2 project-btn">Link</button></a>
+        <a href="https://github.com/SPN288/Admin_System"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+      </div>
+      <div class="project-box">
+        <h3> ZELIOUS</h3> <br>
+        <img src="assets/zelious.png" alt="commerce website here" id="dp">
+        <p class="prodecp">The MERN stack-based food ordering app offers a seamless user experience for browsing
+          restaurants,
+          menus, and placing orders. MongoDB stores user and order data, while Express.js and Node.js power the backend
+          for efficient operations.
+        </p>
+        <a href="https://zelious.onrender.com/"><button class="btn btn-color-2 project-btn">Link</button></a>
+        <a href="https://github.com/SPN288/ZELIOUS"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+      </div>
+      <div class="project-box">
+        <h3>Crash Aid</h3> <br>
+        <img src="assets/crashAid.png" alt="commerce website here" id="dp">
+        <p class="prodecp">A real-time accident detection Android app built in Android Studio using Java, leveraging
+          GPS, accelerometer,
+          and gyroscope data to notify users within 500m, with bed availability updates for emergencies.
+        </p>
+        <a href="https://github.com/SPN288/ArashAid_app"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+      </div>
 
 
-    </footer>
-    <script src="fuc.js"></script>
+      <div class="project-box">
+        <h3>Book My Show clone</h3> <br>
+        <img src="assets/bmsc.png" alt="" id="dp">
+        <p class="prodecp">Made a Book My Show clone using React as fronted project
+          and implemented the basic UI and functionality. Integrated
+          TMDB API to fetch images.
+        </p>
+        <a href="https://bookmyshowclonespn.netlify.app/"><button class="btn btn-color-2 project-btn">Link</button></a>
+        <a href="https://github.com/SPN288/Book-My-Show-Clone"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+
+      </div>
+      <div class="project-box">
+        <h3>Thoughtsheet</h3> <br>
+        <img src="assets/Thoughtsheet.png" alt="" id="dp">
+        <p class="prodecp">A simple website where user can Add their thoughts and
+          quotes to the websites collection. It takes input through a
+          form and then add it to the page.
+        </p>
+        <a href="https://spn288.github.io/Thoughtsheet/"><button class="btn btn-color-2 project-btn">Go -></button></a>
+        <a href="https://github.com/SPN288/Thoughtsheet"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+
+      </div>
+
+      <div class="project-box">
+        <h3>Secret Santa</h3> <br>
+        <img src="assets/santa.png" alt="commerce website here" id="dp">
+        <p class="prodecp">Created a Secret Santa form page using HTML,CSS and
+          JavaScript
+        </p>
+        <a href="https://spn288.github.io/elfster_clone/"><button class="btn btn-color-2 project-btn">Go -></button></a>
+        <a href="https://github.com/SPN288/elfster_clone"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+      </div>
+
+      <div class="project-box">
+        <h3>Book API </h3> <br>
+        <img src="assets/bkapi.png" alt="" id="dp">
+        <p class="prodecp">Made a Book database API as a backend project using Node
+          JS and Mongo DB as database.
+        </p>
+        <a href="https://github.com/SPN288/BookAPI.git"><button class="btn btn-color-2 project-btn">GitHub</button></a>
+
+      </div>
+
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section_text_p1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email Icon" class="icon email-icon contact-icon" />
+        <p><a href="mailto:spnirala288@gmail.com">spnirala288@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="Linkedin Icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/satya-prakash-nirala-6a30b2225">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/git.png" alt="Linkedin Icon" class="icon contact-icon" />
+        <p><a href="https://github.com/SPN288">Github</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/leetcode.jpeg" alt="Linkedin Icon" class="icon contact-icon" />
+        <p><a href="https://leetcode.com/u/spn288/">LeetCode</a></p>
+      </div>
+      
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="contactform.html">Contact Form</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2024 Satya Prakash Nirala. All Rights Reserved</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

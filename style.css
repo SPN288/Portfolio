@@ -1,290 +1,460 @@
+/* Common Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(251, 255, 255);
 }
 
 body {
-    background-color: #23283e;
-    color: white;
-    overflow-y: scroll;
-
+  font-family: "Poppins", sans-serif;
 }
 
-/*HEADER*/
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    z-index: 1;
-    background-color:  #23283e;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-
-
+html {
+  scroll-behavior: smooth;
 }
 
-/*NAVBAR*/
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* Transition */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* Desktop Nav */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
 a {
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
 }
 
-li {
-    list-style: none;
-}
-
-.navbar {
-    top: 0;
-    display: flex;
-    height: 10px;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 20px;
-    color: whitesmoke;
-}
-
-.nav-links a {
-    color: hsla(0, 0%, 100%, .5);
+a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: rgb(181, 181, 181);
 }
 
 .logo {
-    font-size: 32px;
+  font-size: 2rem;
 }
 
-.menu {
-    display: flex;
-    gap: 2em;
-    font-size: 18px;
+.logo:hover {
+  cursor: default;
 }
 
-.menu a:hover {
-    color: whitesmoke;
-    transition: 0.3s ease;
+/* Dropdown Menu */
+
+#dropdown-nav {
+  display: none;
 }
 
-.menu li {
-    padding: 5px 3px;
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
 }
 
-
-
-
-
-main {
-    margin-top: 50px;
-
+.dropdown-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
 }
 
-.sect {
-    position: relative;
-    padding: 30px;
-    margin: 20px;
-    margin-top: 30px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+.dropdown-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
 }
 
-
-.intro {
-    overflow: hidden;
-    height: 100%;
-    text-align: center;
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
 }
 
-.intro-name {
-
-    color: #cdcdff;
-    font-size: 3rem;
-    margin: 5px;
-    padding: 10px;
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: balck;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
 }
 
-#name {
-    color: #90a0d9;
+.menu-links li {
+  list-style: none;
 }
 
-.intro-deg {
-    color: #cdcdff;
-    font-size: 2rem;
-    margin: 5px;
-    padding: 10px;
+.menu-links.open {
+  max-height: 300px;
 }
 
-.intro-decs {
-    color: #cdcdff;
-    margin: 5px;
-    padding: 10px;
+.dropdown-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.dropdown-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.dropdown-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
 }
 
-
-#resume {
-    background-color: inherit;
-    color: #cdcdff;
-    padding: 10px;
-    border-radius: 4px;
-    border-color: #cdcdff;
-    cursor: pointer;
+.dropdown-icon span :first-child {
+  transform: none;
+}
+.dropdown-icon span :first-child {
+  opacity: 1;
+}
+.dropdown-icon span :first-child {
+  transform: none;
 }
 
-#dp-box {
-    width: 30%;
+/* Styling for sections */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
 }
 
-#dp {
-    width: 100%;
+.section-container {
+  display: flex;
 }
 
-.about {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    justify-content: space-around;
-}
-#about-dp {
-    margin-top: 8%;
-    width: 200px;
+/* Profile Section */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
 }
 
-.about-box {
-    margin: 10px;
-    padding: 1%;
-    width: 750px;
-    text-align: left;
-    font-size: 20px;
-    
-}
-.about-box li {
-    list-style: circle;
-    text-align: left;
-    margin-top: 10px;
+.section_pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  
+  border-radius: 30%;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    justify-content: space-evenly;
-
+.section_text {
+  align-self: center;
+  text-align: center;
 }
 
-#sk {
-    font-size: 3em;
-    text-align: center;
+.section_text_p {
+  font-weight: 600;
 }
 
-.skill-box {
-    margin: 10px;
-    padding: 20px;
-    width: inherit;
-    text-align: center;
-    font-size: xx-large;
-    
-
-
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-
+.section_text_p1 {
+  text-align: center;
 }
 
-#pr {
-    font-size: 3em;
-    text-align: center;
+.section_text_p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#social-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+/* Icon */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* Buttons */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(55, 55, 55) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* About Section */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-detail-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-detail-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.detail-container {
+  padding: 1.5rem;
+  flex: 1;
+  
+  text-align: center;
+  
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 20px;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section_pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* Skills */
+
+#experience {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+  
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+article .icon {
+  cursor: default;
+}
+
+/* Projects Section */
+
+#projects{
+  margin-top: 2rem;
 }
 
 .project {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-around;
 }
 
 .project-box {
-    margin: 10px;
-    padding: 20px;
-    width: 350px;
-    text-align: center;
-    font-size: xx-large;
+  margin: 10px;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  font-size: xx-large;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 20px;
+  
+}
+.prodecp {
+  font-size: 18px;
+}
+#dp {
+  width: 100%;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+
+/* Contact */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+   
+    margin: 2rem auto;
+    padding: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 20px;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
     
 }
 
-
-footer {
-    position: absolute;
-    color: whitesmoke;
-    padding: 20px;
+.contact-icon{
+    cursor: default
 }
 
-footer a {
-    color: antiquewhite;
-    margin: 1em;
-    padding: 1rem;
+.email-icon{
+    height: 2.5rem;
+}
+
+/* Footer */
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p{
     text-align: center;
 }
 
-footer a:hover {
-    color: whitesmoke;
-    transition: 0.3s ease;
-}
-
-.contacts {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-
-}
-
-.contact-box {
-    margin: 2%;
-    padding: 5%;
-    text-align: left;
-    width: 190px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    cursor: pointer;
-}
-.contacts-logo {
-    width: 30px;
-    margin-bottom: -9px;
-}
-
-.lol {
-    color: azure;
-}
-
-#dvc {
-    width: 400px;
-    margin-left: -20%;
-    position: absolute;
-    visibility: hidden;
-    border-radius: 5px;
-    overflow-y: hidden;
-}
-#dav:hover~#dvc {
-    visibility: visible;
-}
-#kiti {
-    width: 400px;
-    margin-left: -20%;
-    position: absolute;
-    visibility: hidden;
-    border-radius: 5px;
-    overflow-y: hidden;
-}
-#kiit:hover~#kiti {
-    visibility: visible;
-}
 @media (max-width: 768px) {
 
-    .about-box {
-        margin: 5px;
-        
-        width: 165px;
-        text-align: left;
-        font-size: 15px;   
-    }
-    .prodecp {
-        font-size: 15px;
-    }
-    #kiti {
-        width: 200px;
-    }
-    #dvc {width: 200px;}
+  .about-box {
+      margin: 5px;
+      
+      width: 165px;
+      text-align: left;
+      font-size: 15px;   
+  }
+  .prodecp {
+      font-size: 15px;
+  }
+  
 
 }
